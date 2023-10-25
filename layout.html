@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    
+</head>
+<body  >
+    <div id="navbar"></div>
+    <div id="sidebar"></div>
+    <div id="sidebar2"></div>
+    <div>
+        Dashboard
+    </div>
+    
+    <script>
+
+        function loadNavbar(){
+            fetch('/components/header/header.html').then(response => response.text()).then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            });
+        }
+
+        function loadSidebar(){
+            fetch('/components/sidebar/sidebar.html').then(response => response.text()).then(data => {
+                document.getElementById('sidebar').innerHTML = data;
+            });
+        }
+        function loadSidebar2(){
+            fetch('/components/sidebar/sidebar2.html').then(response => response.text()).then(data => {
+                document.getElementById('sidebar2').innerHTML = data;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadNavbar();
+            loadSidebar();
+            loadSidebar2();
+        });
+
+    </script>
+    <script src="/assets/script/script.js"></script>
+
+
+</body>
+</html>
