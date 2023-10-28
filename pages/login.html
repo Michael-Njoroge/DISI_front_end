@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    </head>
+    <style>
+        input{
+   outline: none;
+   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+
+        .btn:hover{
+            background-color: rgb(230, 176, 30);
+        }
+        a:visited{
+            color:rgb(14 165 233);
+        }
+       
+    </style>
+
+    <body style="background-color:rgb(51 65 85)">
+
+         <div style=" background-color: #fff; max-height: 100%; max-width:27rem;padding:0.85rem; margin-right:auto; margin-left:auto; border-radius: 0.85rem; margin-top: 37px;">
+
+            <h1 style="text-align: center; margin-bottom:2px; "><img src="/assets/images/edms-removebg-preview.png" alt="EDMS Logo" width="90px" height="90px">
+            </h1>
+            <h1 style= "font-size: 30px; text-align:center; font-weight:bold;  ">SignIn</h1>
+
+            <div id="error-message" class="error" style="color: red; padding-bottom: 15px; text-align: center;" ></div>
+ 
+            <form id="login-form" style="display:flex; flex-direction:column;gap:15px">
+               
+                <input style="background: #fff; color: #495057;border:1px solid rgba(129, 125, 125, .2); padding: 12px 18px 12px 18px;font-weight: 600;height: auto; border-radius:2rem" type="text" placeholder='Username' id='username' required autocomplete="off"/>
+                <input style="background: #fff; color: #495057;border:1px solid rgba(129, 125, 125, .2); padding: 12px 18px 12px 18px;font-weight: 600;height: auto;  border-radius:2rem" type="password" placeholder='Password' id='password' required autocomplete="off"/>
+
+                <button class="btn" type="submit" name="submit" id="submit" style="border: none; background-color:rgb(51 65 85); color:white; padding:0.75rem; border-radius:2rem; text-transform:uppercase; cursor:pointer;margin-top: 18px;"> Sign In</button>
+                <!-- <button type='button' style="border: none; background-color: rgb(185 28 28);color:white;padding:0.75rem;border-radius:2rem;text-transform:uppercase;cursor:pointer">Continue With Google</button> -->
+             </form>
+             <hr style="margin-top: 1.5rem; margin-bottom: 1.5rem; border: 0.5px solid rgba(129, 125, 125, .2);">
+            <a href="#" style="text-decoration:none">
+                <div style="color:rgb(14 165 233); margin-top:5px; align-items: center; justify-content: center; gap: 15px; display: flex;">
+                    <p>
+             <a href="#" style="text-decoration: none;">Forgot Password?</a>
+            </p>
+                <span><a href="/index.html" style="text-decoration: none;">Home</a></span>
+           
+         </div>
+            </a>
+            </div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.getElementById("login-form");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const submitButton = document.getElementById("submit");
+    const errorMessage = document.getElementById("error-message");
+
+    if (loginForm) {
+        loginForm.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+            const loginData = {
+                username: username,
+                password: password
+            };
+
+            submitButton.disabled = true;
+            submitButton.textContent = "Please Wait  ...";
+
+            try {
+           const response= await fetch('http://127.0.0.1:8000/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(loginData)
+            });
+              const  data = await response.json();
+              console.log(data);
+        
+                     if (response.status === 200) {
+                            window.location.href = "dashboard1.html"; // Redirect on success
+                        } else if (response.status === 403) {
+                            errorMessage.style.display = "block";
+                            errorMessage.textContent = "Invalid username or password";
+
+                            usernameInput.value = "";
+                            passwordInput.value = "";
+
+                            setTimeout(() => {
+                                errorMessage.style.display = "none";
+                            }, 3000);
+
+                         } else {
+                            errorMessage.style.display = "block";
+                        errorMessage.textContent = "Error: Something went wrong. Please try again.";
+
+                        
+                         }
+                    }
+                    catch (error) 
+                    { 
+                    errorMessage.style.display = "block";
+                    errorMessage.textContent = "Error: Network issue. Please try again.";
+                    console.error(error);
+         }
+         finally {
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Sign In";
+                }
+        
+    });
+}
+       });
+
+</script>
+   
+</body>
+
+
+
+</html>

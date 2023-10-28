@@ -87,8 +87,7 @@ a{
  }
 
 .nav{
-  height: 100%;
-  display: flex;
+   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
@@ -224,12 +223,13 @@ a{
 
   .sidebar3{
     background-color: var(--cor-branca);
-    width: 2.5rem;
+    width: 5rem;
     height: 100%;
     position: fixed;
     top: 0;
     right: 0;
-
+    cursor: pointer;
+ 
   }
   .contents{
     display: flex;
@@ -237,8 +237,13 @@ a{
     align-items: center;
     margin-top: 2rem;
     gap: 1rem;
-  }
+    cursor: pointer;
+    text-align: center;
+    color: var(--first-color-light);
+    font-weight: lighter;
 
+  }
+   
   .breadcrumb{
     display: flex;
     gap: 2rem;
@@ -285,3 +290,98 @@ a{
 
 
 
+
+
+/* content*/
+.log_out{
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  overflow: hidden;
+}
+.search-box{
+  position: relative;
+  height: 50px;
+  max-width: 550px;
+  width: 100%;
+  margin: 15px 20px;
+}
+.search-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: #F5F6FA;
+  border: 2px solid #EFEEF1;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+}
+.bx-search{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: #2697FF;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.4 ease;
+  cursor: pointer;
+}
+
+.home-content{
+  position: relative;
+  }
+ .top-cards{
+  display: flex;
+  height: 40vh;
+  gap: 1.25rem;
+  font-weight: bold;   
+  padding-top: 20px;
+ }
+/* left box */
+ .top-left-card{
+  width: 50%;
+  background: var(--cor-branca);
+  padding: 10px 30px;
+  border-radius: 12px;
+  }
+ 
+/* Right box */
+ .top-sales{
+  width: 50%;
+  background: var(--cor-branca);
+  padding: 10px 30px;
+  border-radius: 12px;
+  margin-right: 95px;
+ }
+ .bottom-cards{
+  display: flex;
+  height: 40vh;
+  gap: 1.25rem;
+  font-weight: bold; 
+  margin-top: 15px;  
+ }
+ /* left box */
+ .bottom-left-card{
+  width: 50%;
+  background: var(--cor-branca);
+  padding: 20px 30px;
+  border-radius: 12px;
+  }
+ 
+/* Right box */
+ .bottom-right-card{
+  width: 50%;
+  background: var(--cor-branca);
+  padding: 10px 30px;
+  border-radius: 12px;
+  margin-right: 95px;
+ }
+ 
+ 
+ 

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 
 </head>
-<body>
+<body id="corpo-site">
 
       <!-- start header section -->
     <header class="menu-superior" id="menu-superior">
@@ -18,61 +18,105 @@
         <div class="breadcrumbClass">
             <p> Dashboard </p>
         </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <i class='bx bx-search' ></i>
+          </div>
     </header>
         <!-- end header section -->
 
 <!-- start sidebar setion -->
 <div class="menu-lateral" id="menu-lateral">
     <div>
-        <a href="#" class="menu-logo">
+        <a href="/pages/dashboard.html" class="menu-logo">
             <img src="/assets/images/d.jpg" class="menu-logo-img">
             <span class="menu-logo-nome">DISI EDMS</span>
         </a>
 
-        <div>
+       </div>
+       
     <nav class="nav" id="breadcrumb">
        
-                <a href="#" class="nav-list active" title="Dashboard" >
+                <a href="/pages/dashboard.html" class="nav-list active" title="Dashboard">
                      <i class='bx bxs-dashboard nav-icon'></i>
-                    <span>Dashboard</span>
+                     <span>Dashboard</span>
                 </a>
 
-                <a href="#" class="nav-list" title="Repository">
-                 <i class='bx bx-cylinder nav-icon'></i>
+                <a href="/pages/repository.html" class="nav-list" title="Repository">
+                    <i class='bx bx-cylinder nav-icon'></i>
                     <span>Repository</span>
                 </a>
 
                 <a href="#" class="nav-list" title="Recently Viewed">
-                     <i class='bx bx-low-vision nav-icon'></i>
+                    <i class='bx bx-low-vision nav-icon'></i>
                     <span>Recently Viewed</span>
                 </a>
                 
                 <a href="#" class="nav-list" title="Bookmarks">
-                     <i class='bx bx-label nav-icon'></i>
+                    <i class='bx bx-label nav-icon'></i>
                     <span>Bookmarks</span>
                 </a>
 
                 <a href="#" class="nav-list" title="Saved Searches">
-                     <i class='bx bx-zoom-in nav-icon'></i>
+                    <i class='bx bx-zoom-in nav-icon'></i>
                     <span>Saved Searches</span>
                 </a>
 
                 <a href="#" class="nav-list" title="Work Flows">
-                     <i class='bx bxs-briefcase-alt-2 nav-icon'></i>
+                    <i class='bx bxs-briefcase-alt-2 nav-icon'></i>
                     <span>Work Flows</span>
                 </a>
 
                 <a href="#" class="nav-list" title="Settings">
-                     <i class='bx bx-cog nav-icon'></i>
+                    <i class='bx bx-cog nav-icon'></i>
                     <span>Settings</span>
                 </a>
 
-            </div>
+                 <a href="#" class="log_out nav-list" title="Log Out">
+                    <i class='bx bx-log-out nav-icon'></i>
+                    <span class="links_name">Log Out</span>
+                </a>
+                    
+                   
+
+            
         </div>
     </nav>
 </div>
 <!-- end sidebar section -->
+ 
+<div class="sidebar3">
+         <a href="#" class="contents" title="profile">
+            <i class='bx bx-user-circle' style="font-size: 2.5rem;"></i>
+        </a>
+         <a href="#" class="contents" title="notifications">
+            <i class="bx bx-bell" style="font-size: 2.5rem;"></i>
+        </a> 
+ </div>
 
+
+<div class="home-content">
+     
+    <div class="top-cards">
+      <div class="top-left-card">
+         Assigned Tasks
+      </div>
+
+      <div class="top-sales">
+         Task Status
+      </div>
+    </div>
+    <div class="bottom-cards">
+        <div class="bottom-left-card">
+           Assigned Workflows
+        </div>
+  
+        <div class="bottom-right-card">
+           Task Handled Time (in minutes)
+        </div>
+      </div>
+  </div>
+ 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 <script src="/assets/script/script.js"></script>
 </body>

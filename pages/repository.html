@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+         
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+        <title>Repository</title>
+    </head>
+    <body id="corpo-site">
+
+
+        
+        
+
+        <!-- start header section -->
+        <header class="menu-superior" id="menu-superior">
+            <div class="btn-menu">
+                <i class='bx bx-menu' id="btn-menu"></i>
+            </div>
+            <div class="breadcrumbClass">
+                <p> Repository </p>
+                </div>
+            </header>
+            <!-- end header section -->
+
+            
+            <div class="breadcrumb">
+                
+                 <a href="#" class="nav-list2"><i class='bx bx-plus icon'></i>
+                 <span>New</span>
+                </a> 
+                 
+                 
+                    <a href="#" class="nav-list2"> <i class='bx bx-search-alt-2 icon' ></i></i>
+                    <span>Search</span>
+                   </a> 
+                    
+                    
+                    <a href="#" class="nav-list2" onclick="toggleSidebar()">  <i class='bx bx-image-alt icon'></i></i></i>
+                    <span>Thumbnails</span>
+                   </a> 
+                    
+                    
+                    <a href="#" class="nav-list2">   <i class='bx bx-list-check icon' ></i>
+                    <span>List View</span>
+                   </a> 
+                    
+                   <a href="#" class="nav-list2" onclick="toggleSidebar2()"> <i class='bx bxs-bar-chart-alt-2 icon'></i>
+                    <span>Reports</span>
+                </a>
+
+                <a href="#" class="nav-list2"><i class='bx bx-cog icon' ></i>
+                    <span>Properties</span>
+                </a>
+                </div>
+
+        
+
+        <!-- start sidebar setion -->
+        <div class="menu-lateral" id="menu-lateral">
+            <div>
+                <a href="/pages/dashboard.html" class="menu-logo">
+                    <img src="/assets/images/d.jpg" class="menu-logo-img">
+                    <span class="menu-logo-nome">DISI EDMS</span>
+                </a>
+
+                <div>
+            <nav class="nav">
+               
+                        <a href="/pages/dashboard.html" class="nav-list" title="Dashboard" >
+                             <i class='bx bxs-dashboard nav-icon'></i>
+                            <span>Dashboard</span>
+                        </a>
+
+                        <a href="/pages/repository.html" class="nav-list active" title="Repository" >
+                         <i class='bx bx-cylinder nav-icon'></i>
+                            <span>Repository</span>
+                        </a>
+
+                        <a href="#" class="nav-list" title="Recently Viewed">
+                             <i class='bx bx-low-vision nav-icon'></i>
+                            <span>Recently Viewed</span>
+                        </a>
+                        
+                        <a href="#" class="nav-list" title="Bookmarks">
+                             <i class='bx bx-label nav-icon'></i>
+                            <span>Bookmarks</span>
+                        </a>
+
+                        <a href="#" class="nav-list" title="Saved Searches">
+                             <i class='bx bx-zoom-in nav-icon'></i>
+                            <span>Saved Searches</span>
+                        </a>
+
+                        <a href="#" class="nav-list" title="Work Flows">
+                             <i class='bx bxs-briefcase-alt-2 nav-icon'></i>
+                            <span>Work Flows</span>
+                        </a>
+
+                        <a href="#" class="nav-list" title="Settings">
+                             <i class='bx bx-cog nav-icon'></i>
+                            <span>Settings</span>
+                        </a>
+
+                        <a href="#" class="log_out nav-list" title="Log Out">
+                            <i class='bx bx-log-out nav-icon'></i>
+                            <span class="links_name">Log Out</span>
+                        </a>
+ 
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- end sidebar section -->
+
+
+        
+    <!-- start right sidebar-->
+ 
+    <!--The actual content of the right sidebar-->
+    <div class="sidebar" id="sidebar">
+      
+    <div class="container-liner">
+    <h3> Properties</h3>
+    <span class="close_btn" onclick="toggleSidebar()" ><i  class='bx  bx-x'></i></span>
+</div>
+    <div class="sub-sidebar">
+
+            <p>Meta Data</p>
+            <p>Index Fields</p>
+            <p>Permissions</p>
+            <p>Automations</p>
+            
+    </div>
+    
+   
+    </div>
+    <!-- end right sidebar  -->
+
+
+
+    <!-- The actual content of the right sidebar-->
+    <div class="sidebar" id="sidebar2">
+        <div class="container-liner">
+        <h3> Report Properties</h3>
+        <span class="close_btn" onclick="toggleSidebar2()" ><i  class='bx  bx-x'></i></span>
+       
+        </div>
+        </div>
+        <!-- end right sidebar  -->
+
+        <div class="sidebar3">
+            <a href="#" class="contents" title="profile">
+               <i class='bx bx-user-circle' style="font-size: 2.5rem;"></i>
+           </a>
+            <a href="#" class="contents" title="notifications">
+               <i class="bx bx-bell" style="font-size: 2.5rem;"></i>
+           </a> 
+    </div>
+    
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+         <script src="/assets/script/script.js"></script>
+    </body>
+</html>
