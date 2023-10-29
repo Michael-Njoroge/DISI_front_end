@@ -9,7 +9,7 @@
    --cor-azul-principal: #5d9e3f;
    --cor-azul: #a1f37c;
   --first-color-light: #29282e;
-  --cor-branca: #e9e9f1;
+  --cor-branca: #e9f1ee;
   --cor-white: #f56e84;
 
   
@@ -384,4 +384,8 @@ a{
  }
  
  
+footer {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
  
