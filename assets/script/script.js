@@ -9,6 +9,8 @@ function toggleMenu() {
     const menu = document.getElementById("menu-lateral");
     const menuSuperior = document.getElementById("menu-superior");
     const corpoSite = document.getElementById("corpo-site");
+    const createNew = document.getElementsByClassName("new");
+
 
      menu.classList.toggle('show')
 
@@ -17,6 +19,7 @@ function toggleMenu() {
      menuSuperior.classList.toggle('body-pd')
 
      corpoSite.classList.toggle('body-pd')
+     createNew.classList.toggle('body-pd')
 }
 
 
@@ -29,6 +32,17 @@ function colorLink(){
     }
 }
 navList.forEach(l=> l.addEventListener('click', colorLink))
+
+
+const navList2 = document.querySelectorAll('.nav-list2')
+
+function colorLink(){
+    if(navList2){
+        navList2.forEach(l=> l.classList.remove('active'))
+        this.classList.add('active')
+    }
+}
+navList2.forEach(l=> l.addEventListener('click', colorLink))
 
  //toggle left sidebar
    function toggleSidebar(){
@@ -52,6 +66,24 @@ navList.forEach(l=> l.addEventListener('click', colorLink))
  
   }
   
-  
+  $('#new').click(function(){
+    $('ul').toggleClass('active');
+  });
 
- 
+//  newfolder
+
+$(document).ready(function() {
+  $('#new-folder').click(function(e) {
+    $('.wrapper').fadeIn(500);
+    $('.popup-box').removeClass('transform-out').addClass('transform-in');
+
+    e.preventDefault();
+  });
+
+  $('.popup-close').click(function(e) {
+    $('.wrapper').fadeOut(500);
+    $('.popup-box').removeClass('transform-in').addClass('transform-out');
+
+    e.preventDefault();
+  });
+});
